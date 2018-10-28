@@ -1,0 +1,14 @@
+{
+  "name": "kargasanat",
+  "version": "1.0.0",
+  "description": "karga sanat webpage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "author": "Deniz Gulmez",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  }
+}
