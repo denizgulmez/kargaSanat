@@ -1,0 +1,277 @@
+// Widescreens
+@include mediaXXl {
+  main &#about {
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 0px 0px;
+
+    h1 {
+      grid-column: 1/4;
+    }
+
+    .one {
+      grid-column: 1/2;
+    }
+
+    .two {
+      grid-column: 2/3;
+    }
+
+    .three {
+      grid-column: 3/4;
+    }
+  }
+
+  main &#services {
+    .one,
+    .three {
+      margin-left: 25%;
+    }
+
+    .two,
+    .four {
+      margin-right: 25%;
+    }
+  }
+}
+
+@include mediaXl {
+  main &#services {
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 0px 0px;
+
+    .card-item .card {
+      width: 500px;
+    }
+
+    h1 {
+      grid-column: 1/3;
+    }
+
+    .one,
+    .three {
+      grid-column: 1/2;
+    }
+
+    .two,
+    .four {
+      grid-column: 2/3;
+    }
+  }
+
+  main &#info {
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 0px 0px;
+
+    .contact {
+      grid-column: 1/2;
+    }
+
+    .social-media {
+      grid-column: 2/3;
+    }
+  }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  .menu-btn,
+  .menu-banner &.banner-text {
+    display: none;
+  }
+
+  main {
+    .main-logo {
+      padding-top: 200px;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      padding: 0 50px;
+    }
+
+    h1 {
+      line-height: 1;
+      font-size: 3rem;
+
+      &.lg-heading {
+        line-height: 1.25;
+      }
+
+      &.weak {
+        font-weight: 400;
+      }
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 15px 0;
+    }
+
+    section {
+      .card-item .card {
+        width: 500px;
+      }
+
+      .board-item {
+        width: 550px;
+      }
+    }
+  }
+
+  .icons {
+    .fa-youtube,
+    .fa-instagram {
+      width: 124px;
+      height: 124px;
+      line-height: 120px;
+      margin: 50px 50px;
+    }
+
+    .fab {
+      font-size: 70px;
+    }
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  .navbar {
+    display: none;
+  }
+
+  main {
+    .main-logo {
+      img {
+        width: 200px;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      padding: 0 50px;
+    }
+
+    h1 {
+      line-height: 1;
+      font-size: 4rem;
+
+      &.lg-heading {
+        line-height: 1.25;
+      }
+
+      &.weak {
+        font-weight: 400;
+      }
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 15px 0;
+    }
+
+    section {
+      .card-item .card {
+        width: 500px;
+      }
+
+      .board-item {
+        width: 550px;
+      }
+    }
+  }
+
+  .icons {
+    a {
+      margin: 0;
+      padding: 0;
+    }
+
+    .fa-youtube,
+    .fa-instagram {
+      width: 124px;
+      height: 124px;
+      line-height: 120px;
+      margin: 50px 50px;
+    }
+
+    .fab {
+      font-size: 75px;
+    }
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  .navbar {
+    display: none;
+  }
+}
+
+// Landscape for smartphones
+@include mediaLandscape {
+  .navbar {
+    display: none;
+  }
+
+  .menu-btn,
+  .menu-banner &.banner-text {
+    display: block;
+  }
+
+  .menu {
+    &-nav,
+    &-branding {
+      width: 50%;
+      float: left;
+    }
+
+    &-nav {
+      transform: translate3d(0, 100%, 0);
+      height: 100vh;
+      font-size: 24px;
+    }
+
+    &-branding {
+      transform: translate3d(0, -100%, 0);
+      height: 100vh;
+
+      .logo {
+        height: 100px;
+      }
+    }
+  }
+}
